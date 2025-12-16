@@ -1,0 +1,29 @@
+### get app home
+GET http://localhost:6329/home
+
+
+### Create a new user
+POST http://localhost:6329/api/users/add-new
+Content-Type: application/json
+
+{
+    "name": "Amit Sharma",
+    "username": "amit_sharma2",
+    "email": "amit.sharma@example.com",
+    "password": "password@123"
+}
+
+### login user
+POST localhost:6329/api/user/login
+Content-Type: application/json
+
+{
+  "username": "amit_sharma2",
+  "email": "amit.sharma@example.com",
+  "password": "password@123"
+}
+
+### get list of all users
+GET localhost:6329/api/users/all
+
+
