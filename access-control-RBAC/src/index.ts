@@ -6,6 +6,7 @@ import {StatusCodes} from "http-status-codes";
 import {connectToDB} from "./DB/db_connection.ts";
 import mongoose from "mongoose";
 import router from "./routes/userRoutes.ts";
+import cookieParser from 'cookie-parser';
 
 configDotenv({
     path: __dirname + '/.env'
@@ -18,6 +19,8 @@ const app = express();
 app.use(express.json())
 
 const PORT = process.env.PORT || 3000
+
+app.use(cookieParser());
 
 app.use(router)
 

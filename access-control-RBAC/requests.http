@@ -13,6 +13,28 @@ Content-Type: application/json
     "password": "password@123"
 }
 
+### Register an admin
+POST http://localhost:6329/api/users/add-new
+Content-Type: application/json
+
+{
+  "name": "Admin User Test",
+  "username": "admin_user_test@123",
+  "email": "admin.userTest@example.com",
+  "password": "password@123",
+  "role": "ADMIN"
+}
+
+### Test admin auth
+POST localhost:6329/api/user/login
+Content-Type: application/json
+
+{
+  "username": "admin_user_test@123",
+  "email": "admin.userTest@example.com",
+  "password": "password@123"
+}
+
 ### login user
 POST localhost:6329/api/user/login
 Content-Type: application/json
